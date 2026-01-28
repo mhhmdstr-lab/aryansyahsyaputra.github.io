@@ -5,19 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Aryansyah Syaputra</title>
     <style>
-        body { font-family: sans-serif; text-align: center; background-color: #f0f2f5; padding: 40px 20px; }
-        .card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); display: inline-block; width: 100%; max-width: 350px; }
-        img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; border: 5px solid #007bff; margin-bottom: 20px; }
-        h1 { font-size: 24px; color: #007bff; margin: 10px 0; }
-        p { font-size: 16px; margin: 5px 0; color: #555; font-weight: bold; }
+        body { font-family: sans-serif; background-color: #f4f7f9; margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 500px; margin: auto; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .header { background: #007bff; padding: 30px; text-align: center; color: white; }
+        .header img { border-radius: 50%; width: 120px; height: 120px; border: 4px solid white; object-fit: cover; }
+        .content { padding: 20px; }
+        h1 { margin: 10px 0 5px; font-size: 22px; }
+        .job { color: #f0f0f0; font-weight: bold; margin-bottom: 20px; display: block; }
+        .info-section { text-align: left; margin-top: 20px; }
+        .info-item { border-bottom: 1px solid #eee; padding: 10px 0; display: flex; justify-content: space-between; }
+        .label { font-weight: bold; color: #007bff; }
+        .btn { background: #25d366; color: white; text-decoration: none; display: block; text-align: center; padding: 12px; border-radius: 10px; margin-top: 20px; font-weight: bold; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <img src="https://github.com/mhhmdstr-lab.png" alt="Foto Aryansyah">
-        <h1>Aryansyah Syaputra</h1>
-        <p>Chief Officer (ANT I)</p>
-        <p>PT Pelabuhan Indonesia (Persero)</p>
+    <div class="container">
+        <div class="header">
+            <img src="https://github.com/mhhmdstr-lab.png" alt="Foto Aryansyah">
+            <h1>Aryansyah Syaputra</h1>
+            <span class="job">Chief Officer (ANT I)</span>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <h3>Biodata & Instansi</h3>
+                <div class="info-item"><span class="label">Perusahaan:</span> <span>PT Pelabuhan Indonesia (Persero)</span></div>
+                <div class="info-item"><span class="label">Sertifikasi:</span> <span>Ahli Nautika Tingkat I (ANT I)</span></div>
+                <div class="info-item"><span class="label">Status:</span> <span>Active Duty</span></div>
+            </div>
+            
+            <a href="https://wa.me/628xxxxxxxxxx" class="btn">Hubungi Via WhatsApp</a>
+        </div>
     </div>
 </body>
 </html>
