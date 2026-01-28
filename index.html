@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Profesional - Aryansyah Syaputra</title>
+    <title>Profil Master Unlimited - Aryansyah Syaputra</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f4f7f9; margin: 0; padding: 20px; color: #2c3e50; line-height: 1.7; }
-        .container { max-width: 700px; margin: 40px auto; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.1); border-top: 8px solid #002147; }
-        .header { padding: 50px 20px; text-align: center; border-bottom: 1px solid #eee; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f7f9; margin: 0; padding: 20px; color: #2c3e50; line-height: 1.8; }
+        .container { max-width: 800px; margin: auto; background: white; border-radius: 15px; box-shadow: 0 15px 50px rgba(0,0,0,0.1); border-top: 10px solid #002147; }
+        .header { padding: 40px; text-align: center; border-bottom: 1px solid #eee; }
         .header img { border-radius: 50%; width: 150px; height: 150px; border: 4px solid #002147; object-fit: cover; margin-bottom: 15px; }
-        .header h1 { margin: 0; font-size: 28px; color: #002147; text-transform: uppercase; letter-spacing: 1px; }
-        .header p { margin: 5px 0 0; font-weight: bold; color: #666; font-size: 18px; }
+        .header h1 { margin: 0; font-size: 26px; color: #002147; text-transform: uppercase; }
         
         .content { padding: 40px; }
-        h3 { color: #002147; text-transform: uppercase; font-size: 16px; border-left: 5px solid #002147; padding-left: 12px; margin: 30px 0 15px; letter-spacing: 1px; }
+        .short-bio { display: flex; flex-wrap: wrap; gap: 10px; background: #f0f4f8; padding: 20px; border-radius: 10px; margin-bottom: 30px; border-left: 5px solid #002147; }
+        .bio-item { flex: 1 1 200px; font-size: 14px; }
+        .bio-item b { color: #002147; display: block; text-transform: uppercase; font-size: 11px; }
+
+        h3 { color: #002147; text-transform: uppercase; font-size: 16px; border-bottom: 2px solid #002147; padding-bottom: 8px; margin-top: 40px; }
+        .narrative p { text-align: justify; font-size: 16px; margin-bottom: 20px; color: #444; }
         
-        .bio-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; background: #f9f9f9; border-radius: 10px; overflow: hidden; }
-        .bio-table td { padding: 15px; border-bottom: 1px solid #fff; font-size: 15px; }
-        .label { font-weight: bold; color: #002147; width: 35%; }
+        .career-step { margin-bottom: 25px; padding-left: 20px; border-left: 2px solid #002147; }
+        .career-step b { color: #002147; font-size: 16px; }
         
-        .narrative p { text-align: justify; font-size: 16px; margin-bottom: 20px; }
-        .highlight { color: #002147; font-weight: bold; }
-        
-        @media (max-width: 600px) { .content { padding: 20px; } .header h1 { font-size: 22px; } }
+        .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .cert-tag { background: #eef2f7; padding: 10px; border-radius: 5px; font-size: 13px; font-weight: 500; border: 1px solid #d1d9e6; }
+
+        @media (max-width: 600px) { .cert-grid { grid-template-columns: 1fr; } .content { padding: 25px; } }
     </style>
 </head>
 <body>
@@ -31,26 +34,50 @@
         <div class="header">
             <img src="https://github.com/mhhmdstr-lab.png" alt="Aryansyah Syaputra">
             <h1>Aryansyah Syaputra</h1>
-            <p>CHIEF OFFICER | ANT I</p>
+            <p style="font-weight: bold; color: #666; margin-top: 10px;">CHIEF OFFICER | ANT I</p>
         </div>
 
         <div class="content">
-            <h3>Biodata Pribadi</h3>
-            <table class="bio-table">
-                <tr><td class="label">Tgl Lahir</td><td>Tangerang, 01 September 1995</td></tr>
-                <tr><td class="label">Alamat</td><td>Komplek Dewa Ruci, Jl. Angin Praha, RT 08/02 No. 12</td></tr>
-                <tr><td class="label">Pendidikan</td><td>STIP Jakarta</td></tr>
-                <tr><td class="label">Instansi</td><td>PT Pelabuhan Indonesia (Persero)</td></tr>
-                <tr><td class="label">Kualifikasi</td><td>Master Unlimited (ANT I)</td></tr>
-            </table>
+            <div class="short-bio">
+                <div class="bio-item"><b>Lahir</b>Tangerang, 1 Sept 1995</div>
+                <div class="bio-item"><b>Domisili</b>Dewa Ruci, Jakarta</div>
+                <div class="bio-item"><b>Kualifikasi</b>ANT I (Master Unlimited)</div>
+                <div class="bio-item"><b>Instansi</b>PT Pelindo (Persero)</div>
+            </div>
 
-            <h3>Pengalaman & Perjalanan Karier</h3>
+            <h3>Profil & Filosofi</h3>
             <div class="narrative">
-                <p>Lahir di <span class="highlight">Tangerang pada 1 September 1995</span>, saya mendedikasikan hidup sepenuhnya untuk dunia maritim. Berdomisili di <span class="highlight">Komplek Dewa Ruci</span>, saya membawa nilai disiplin dan integritas ke dalam karier profesional di <span class="highlight">PT Pelindo</span>.</p>
-                
-                <p>Perjalanan karier saya dimulai dari <span class="highlight">STIP Jakarta</span> pada tahun 2017. Meniti tangga dari perwira muda hingga menjabat sebagai <span class="highlight">Chief Officer</span>, saya telah mengasah keahlian navigasi dan manajemen operasional di berbagai kapal niaga internasional.</p>
-                
-                <p>Pada tahun 2024, saya berhasil meraih kualifikasi tertinggi <span class="highlight">Ahli Nautika Tingkat I (ANT I)</span>. Sebagai perwira Master Unlimited, saya berkomitmen untuk terus menjaga standar keselamatan laut dan berkontribusi bagi kemajuan maritim Indonesia.</p>
+                <p>Lahir di Tangerang, saya mendedikasikan hidup sepenuhnya untuk samudera. Bagi saya, laut bukan sekadar tempat bekerja, melainkan medan pembuktian integritas dan ketangguhan mental. Disiplin bahari yang saya bawa dari Komplek Dewa Ruci kini saya terapkan secara profesional dalam menjaga konektivitas maritim di PT Pelindo.</p>
+            </div>
+
+            <h3>Rentang Perjalanan Karier</h3>
+            <div class="career-step">
+                <b>2013 – 2017: Pembentukan (ANT III)</b>
+                <p style="margin-top:5px; font-size:15px; color:#555;">Pendidikan di STIP Jakarta (Angkatan 50) dan penyelesaian Praktik Laut di kapal niaga internasional.</p>
+            </div>
+            <div class="career-step">
+                <b>2018 – 2021: Operational Level</b>
+                <p style="margin-top:5px; font-size:15px; color:#555;">Bertugas sebagai perwira navigasi rute internasional. Fokus pada keselamatan pelayaran dan Passage Planning.</p>
+            </div>
+            <div class="career-step">
+                <b>2022 – 2023: Management Level (Chief Officer)</b>
+                <p style="margin-top:5px; font-size:15px; color:#555;">Bertanggung jawab atas stabilitas kapal, operasional muatan, dan manajemen departemen dek.</p>
+            </div>
+            <div class="career-step">
+                <b>2024 – Sekarang: Master Unlimited (ANT I)</b>
+                <p style="margin-top:5px; font-size:15px; color:#555;">Meraih kualifikasi tertinggi maritim dengan wewenang penuh memimpin kapal tanpa batasan tonase.</p>
+            </div>
+
+            <h3>Inventaris Sertifikasi</h3>
+            <div class="cert-grid">
+                <div class="cert-tag">ANT I (Master Unlimited)</div>
+                <div class="cert-tag">GMDSS Radio Operator</div>
+                <div class="cert-tag">Advanced Fire Fighting (AFF)</div>
+                <div class="cert-tag">Medical Care (MC)</div>
+                <div class="cert-tag">ECDIS & RADAR/ARPA</div>
+                <div class="cert-tag">Ship Security Officer (SSO)</div>
+                <div class="cert-tag">Bridge Resource Management (BRM)</div>
+                <div class="cert-tag">Basic Safety Training (BST)</div>
             </div>
         </div>
     </div>
