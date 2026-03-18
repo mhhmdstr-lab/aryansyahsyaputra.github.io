@@ -3,208 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Resume | Aryansyah Syaputra</title>
+    <title>Biodata Profesional | Aryansyah Syaputra</title>
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     <style>
         :root {
-            --navy: #002147;
-            --gold: #d4af37;
+            --navy: #002347;
+            --gold: #c5a059;
             --white: #ffffff;
-            --gray: #f8f9fa;
+            --text-dark: #2d3436;
+            --accent-blue: #0055b8; /* Warna Pelindo */
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #e9ecef;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f1f2f6;
             margin: 0;
             padding: 0;
+            color: var(--text-dark);
         }
 
-        .resume-wrapper {
-            max-width: 950px;
-            margin: 40px auto;
-            background: var(--white);
-            display: flex;
-            flex-wrap: wrap;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        /* SIDEBAR (KIRI) */
-        .sidebar {
-            flex: 1;
-            min-width: 320px;
-            background: var(--navy);
+        /* HEADER & HERO */
+        header {
+            background: linear-gradient(rgba(0,35,71,0.9), rgba(0,35,71,0.9)), 
+                        url('https://images.unsplash.com');
+            background-size: cover;
+            background-position: center;
             color: var(--white);
-            padding: 40px 30px;
-        }
-
-        .profile-frame {
             text-align: center;
-            margin-bottom: 30px;
+            padding: 80px 20px;
         }
 
-        .profile-img {
+        .profile-pic {
             width: 200px;
-            height: 260px;
+            height: 250px;
             object-fit: cover;
             border: 4px solid var(--gold);
-            border-radius: 5px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .sidebar h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.6rem;
+        header h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem;
+            margin: 10px 0;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
             color: var(--gold);
-            margin: 15px 0 5px;
+            font-weight: 600;
             text-transform: uppercase;
         }
 
-        .rank-tag {
-            font-weight: 500;
-            letter-spacing: 1px;
+        /* MAIN CONTAINER */
+        .container {
+            max-width: 900px;
+            margin: -50px auto 50px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        /* IDENTITAS DASAR */
+        .identitas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            background: var(--navy);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .identitas-item strong {
             display: block;
-            margin-bottom: 30px;
-            font-size: 0.9rem;
-            opacity: 0.9;
+            color: var(--gold);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
         }
 
-        .info-box {
-            background: rgba(255,255,255,0.05);
-            padding: 20px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-        }
-
-        .info-box p { margin: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; }
-        .info-box strong { color: var(--gold); display: block; font-size: 0.75rem; text-transform: uppercase; }
-
-        /* CONTENT (KANAN) */
-        .main-content {
-            flex: 2;
-            min-width: 450px;
-            padding: 50px;
+        /* SECTION STYLE */
+        section {
+            margin-bottom: 50px;
         }
 
         h2 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Merriweather', serif;
             color: var(--navy);
-            border-bottom: 2px solid var(--gold);
-            padding-bottom: 8px;
-            margin-top: 35px;
-            font-size: 1.3rem;
-            text-transform: uppercase;
+            border-bottom: 3px solid var(--gold);
+            display: inline-block;
+            margin-bottom: 20px;
         }
 
-        .summary-text { font-size: 1rem; line-height: 1.7; color: #444; }
-        
-        .experience-card { margin-bottom: 25px; position: relative; padding-left: 20px; border-left: 2px solid #ddd; }
-        .experience-card h3 { margin: 0; color: var(--navy); font-size: 1.15rem; }
-        .experience-card .date { font-weight: bold; color: var(--gold); font-size: 0.9rem; }
-
-        .pelindo-highlight {
-            background: #f0f4f8;
-            border-left: 5px solid #0055b8;
-            padding: 15px;
-            margin: 25px 0;
-            font-size: 0.95rem;
+        p {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #444;
+            text-align: justify;
         }
 
-        .competency-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-
-        .competency-grid div {
-            padding: 8px;
+        .highlight-box {
             background: #f8f9fa;
+            border-left: 6px solid var(--accent-blue);
+            padding: 25px;
+            margin: 30px 0;
             border-radius: 4px;
-            font-size: 0.9rem;
-            border-left: 3px solid var(--gold);
         }
 
-        @media (max-width: 768px) {
-            .resume-wrapper { margin: 0; }
-            .sidebar, .main-content { flex: 100%; }
+        /* LIST STYLE */
+        .skill-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .skill-list li {
+            background: #f1f2f6;
+            padding: 12px 15px;
+            border-radius: 5px;
+            font-weight: 600;
+            color: var(--navy);
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-list li::before {
+            content: '⚓';
+            margin-right: 10px;
+            color: var(--gold);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            .container { padding: 20px; margin-top: -30px; }
         }
     </style>
 </head>
 <body>
 
-<div class="resume-wrapper">
-    <!-- Kolom Kiri: Profil & Identitas -->
-    <aside class="sidebar">
-        <div class="profile-frame">
-            <!-- Ganti 'foto-anda.jpg' dengan file foto Anda -->
-            <img src="foto-anda.jpg" alt="Aryansyah Syaputra" class="profile-img">
-            <h1>Aryansyah Syaputra</h1>
-            <span class="rank-tag">Chief Officer (Mualim I)</span>
+<header>
+    <!-- Masukkan URL Foto GitHub Anda di sini -->
+    <img src="https://raw.githubusercontent.com" alt="Aryansyah Syaputra" class="profile-pic">
+    <h1>Aryansyah Syaputra</h1>
+    <div class="tagline">Chief Officer (Mualim I) – Maritim & Offshore Professional</div>
+</header>
+
+<div class="container">
+    
+    <!-- Informasi Utama -->
+    <div class="identitas-grid">
+        <div class="identitas-item">
+            <strong>Tanggal Lahir</strong>
+            14 April 1996
         </div>
-
-        <div class="info-box">
-            <p><strong>Tanggal Lahir</strong> 14 April 1996</p>
-            <p><strong>Tempat Lahir</strong> Jakarta, Indonesia</p>
-            <p><strong>Email</strong> Aryansyahsyaputra7@gmail.com</p>
-            <p><strong>Penempatan</strong> Offshore Natuna</p>
-            <p><strong>Sertifikasi Tertinggi</strong> Ahli Nautika Tingkat I (ANT I)</p>
+        <div class="identitas-item">
+            <strong>Tempat Lahir</strong>
+            Jakarta, Indonesia
         </div>
-    </aside>
+        <div class="identitas-item">
+            <strong>Email Pribadi</strong>
+            Aryansyahsyaputra7@gmail.com
+        </div>
+        <div class="identitas-item">
+            <strong>Penempatan Saat Ini</strong>
+            Offshore – Perairan Natuna
+        </div>
+    </div>
 
-    <!-- Kolom Kanan: Detail Profesional -->
-    <main class="main-content">
-        <section>
-            <h2>Ringkasan Profil</h2>
-            <p class="summary-text">
-                Chief Officer (Mualim I) dengan pengalaman lebih dari <strong>5+ tahun sea service</strong> di industri pelayaran niaga dan offshore. Berpengalaman luas dalam operasional kapal pengangkut minyak (oil tanker) dan keterlibatan strategis dengan <strong>PT Pelabuhan Indonesia (Pelindo)</strong> dalam manajemen logistik pelabuhan.
-            </p>
-        </section>
+    <!-- Narasi Diri -->
+    <section>
+        <h2>Tentang Saya</h2>
+        <p>
+            Saya adalah seorang perwira dek dengan kualifikasi <strong>Ahli Nautika Tingkat I (ANT I)</strong> yang telah mendedikasikan lebih dari <strong>5 tahun</strong> masa tugas di laut (sea service). Perjalanan karier saya didominasi oleh operasional pada kapal pengangkut minyak (Oil Tanker) dan kapal pendukung lepas pantai (Offshore Support Vessel). 
+        </p>
+        <p>
+            Saya dikenal sebagai pribadi yang disiplin, memiliki ketahanan mental yang kuat dalam bekerja di bawah tekanan tinggi, serta memiliki dedikasi penuh terhadap keselamatan kru dan muatan. Bagi saya, laut bukan sekadar tempat bekerja, melainkan medan profesionalisme yang menuntut ketelitian navigasi dan manajemen operasional yang sempurna.
+        </p>
+    </section>
 
-        <section>
-            <h2>Pengalaman Kerja</h2>
-            <div class="experience-card">
-                <h3>Chief Officer (Mualim I)</h3>
-                <span class="date">Offshore Natuna | Saat Ini</span>
-                <p>Pengawasan penuh operasional dek, oil cargo handling, dan kepatuhan standar SOLAS/ISM Code.</p>
-            </div>
+    <!-- Pengalaman Profesional -->
+    <section>
+        <h2>Pengalaman & Karier</h2>
+        <p>
+            Sebagai seorang <strong>Chief Officer</strong>, tanggung jawab saya meliputi pengawasan menyeluruh terhadap operasional dek, mulai dari pengelolaan stabilitas kapal hingga prosedur <em>oil cargo handling</em> (loading & discharging). Saya memastikan setiap inci pergerakan muatan dilakukan sesuai standar internasional seperti SOLAS dan ISM Code.
+        </p>
+        
+        <div class="highlight-box">
+            <strong>Kredibilitas di Lingkungan Pelindo:</strong><br>
+            Dalam rekam jejak profesional saya, saya sering terlibat dalam koordinasi strategis dengan <strong>PT Pelabuhan Indonesia (Pelindo)</strong>. Pengalaman ini mencakup manajemen bongkar muat di berbagai terminal pelabuhan besar, sinkronisasi logistik antara kapal dan darat, serta memastikan kepatuhan terhadap regulasi pelabuhan nasional yang terintegrasi.
+        </div>
+        
+        <p>
+            Sebelum mencapai posisi Mualim I, saya telah melewati jenjang pendidikan dan praktik lapangan yang ketat, mulai dari menjadi Deck Cadet hingga menjabat sebagai Mualim II (Second Officer) yang bertanggung jawab atas <em>voyage planning</em> dan sistem navigasi elektronik tercanggih (ECDIS/ARPA).
+        </p>
+    </section>
 
-            <div class="experience-card">
-                <h3>Second Officer (Mualim II)</h3>
-                <p>Voyage planning, navigasi elektronik (ECDIS/Radar), dan keselamatan jalur pelayaran.</p>
-            </div>
+    <!-- Kompetensi -->
+    <section>
+        <h2>Keahlian & Kompetensi</h2>
+        <ul class="skill-list">
+            <li>Oil Tanker & Cargo Operation</li>
+            <li>Offshore Support Vessel Operation</li>
+            <li>Ship Stability & Load Management</li>
+            <li>Safety Management System (ISM Code)</li>
+            <li>Voyage Planning & Navigation</li>
+            <li>Leadership & Crew Coordination</li>
+        </ul>
+    </section>
 
-            <div class="pelindo-highlight">
-                <strong>Pengalaman Profesional Pelindo:</strong><br>
-                Terlibat dalam koordinasi bongkar muat, distribusi logistik, dan pengawasan pergerakan kapal di area otoritas PT Pelabuhan Indonesia (Pelindo).
-            </div>
-        </section>
+    <!-- Visi Masa Depan -->
+    <section>
+        <h2>Tujuan Profesional</h2>
+        <p>
+            Visi saya adalah terus berkontribusi dalam industri maritim global, membawa nama baik pelaut Indonesia di kancah internasional. Saya berkomitmen untuk meningkatkan efisiensi operasional dan standar keselamatan maritim pada setiap kapal yang saya pimpin, serta menjalin kolaborasi yang lebih kuat dengan otoritas pelabuhan global untuk memperlancar arus logistik dunia.
+        </p>
+    </section>
 
-        <section>
-            <h2>Kompetensi Utama</h2>
-            <div class="competency-grid">
-                <div>Oil Tanker & Cargo Handling</div>
-                <div>Offshore Vessel Operation</div>
-                <div>Ship Stability Management</div>
-                <div>Navigation & Voyage Planning</div>
-                <div>Leadership & Crew Mgmt</div>
-                <div>Safety Management System</div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Sertifikasi STCW</h2>
-            <p style="font-size: 0.9rem; line-height: 1.8;">
-                BST • AFF • MFA • PSC • Radar Navigation & ARPA • ECDIS • GMDSS
-            </p>
-        </section>
-
-        <section style="margin-top: 40px; border-top: 1px solid #eee; padding-top: 10px;">
-            <p style="font-style: italic; font-size: 0.8rem; color: #888;">
-                Berorientasi pada efisiensi operasional dan standar keselamatan maritim global.
-            </p>
-        </section>
-    </main>
+    <div class="footer">
+        &copy; 2024 Aryansyah Syaputra. Semua Hak Dilindungi.
+    </div>
 </div>
 
 </body>
